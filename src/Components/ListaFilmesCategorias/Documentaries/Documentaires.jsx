@@ -35,7 +35,7 @@ function Documentaires() {
             slidesPerView: 5.5,
           },
           0: {
-            slidesPerView: 3.5,
+            slidesPerView: 2.7,
           },
         },
       };
