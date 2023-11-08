@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 98.5vw;
+    width: 98.9vw;
     height: 100%;
     border-bottom: 1.5px solid #3c3c3c;
+    background-color: #e9e9e9;
 }
 .categoryName{
     width: 100%;
@@ -47,7 +48,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 10px;
 }
 .containerSwiper img{
     width: 160px;
@@ -97,5 +97,8 @@
     .containerSwiper span{
         padding: 0 10px;
         font-size: 10pt;
+    }
+    .containerSwiper img{
+        width: 80px;
     }
 }
