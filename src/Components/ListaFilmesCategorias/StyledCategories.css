@@ -90,13 +90,22 @@
     }
 }
 @media (max-width:425px) {
+    .categoryName{
+        font-size: 11pt;
+    }
+    .categoryName button{
+        font-size: 10pt;
+        padding: 5px 8px;
+        border: 2px solid #3c3c3c;
+        border-radius: 20px;
+    }
     .containerSwiper{
         color: #3c3c3c;
         width: 25vw;
     }
     .containerSwiper span{
         padding: 0 10px;
-        font-size: 10pt;
+        font-size: 10.5pt;
     }
     .containerSwiper img{
         width: 100px;

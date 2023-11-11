@@ -31,8 +31,8 @@ function Documentaires() {
         navigation: true,
         pagination: true,
         breakpoints: {
-          1920: {
-            slidesPerView: 5.5,
+           1024: {
+            slidesPerView: 6.4,
           },
           0: {
             slidesPerView: 2.7,

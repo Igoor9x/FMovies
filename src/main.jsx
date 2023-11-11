@@ -5,6 +5,8 @@ import './index.css'
 import Home from './Pages/Home.jsx'
 import InfoMovie from './Pages/InfoMovie.jsx'
 import ErrorPage from './Pages/ErrorPage.jsx'
+import SearchMovie from './Pages/SearchMovie.jsx'
+import SearchTV from './Pages/SearchTV.jsx'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: 'watchInfo/:mediaType/:id',
         element: <InfoMovie />
+      },
+      {
+        path: 'searchMovie',
+        element: <SearchMovie />
+      },
+      {
+        path: 'searchTV',
+        element: <SearchTV />
       }
     ]
   }

@@ -1,9 +1,8 @@
 .containerHomeShow{
-    width: 98.5vw;
+    width: 98.9vw;
     height: 100vh;
     display: flex;
     justify-content: center;
-    
 }
 .imageBackground{
     position: absolute;
@@ -78,7 +77,10 @@
     color: #FFF;
     background-color: transparent;
  }
- @media(max-width: 1023px){
+ @media(max-width: 1024px){
+    .containerHomeShow{
+        width: 100vw;
+    }
     .textInfo{
         width: 40vw;
         margin-right: 35px;
@@ -89,6 +91,9 @@
     }
  }
  @media(max-width: 768px){
+    .containerHomeShow{
+        width: 99.9vw;
+    }
     .imageTitle img{
         width: 180px;
         height: auto;
@@ -140,7 +145,8 @@
         font-weight: 600;
     }
     .imageTitle img{
-        width: 150px;
+        width: 200px;
         height: auto;
+        margin-bottom: 5px;
     }
  }
