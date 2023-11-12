@@ -11,7 +11,6 @@ const urlImage = 'https://image.tmdb.org/t/p/w500/'
 
 
 
-
 function HorrorMovies() {
     const [listen, setListen] = useState([]);
 
@@ -23,8 +22,8 @@ function HorrorMovies() {
     }
     useEffect(() => {
         getMovies()
-
     }, [])
+    console.log(listen);
         
     const swiperParams = {
         modules: [Navigation, Pagination],
@@ -39,12 +38,11 @@ function HorrorMovies() {
           },
         },
       };
-
+    
     return (
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Horror</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams} >

@@ -8,17 +8,14 @@ const urlBase = 'https://api.themoviedb.org/3'
 const urlImage = 'https://image.tmdb.org/t/p/original/'
 
 
-
 const InfoMovieAndTV = () => {
     const { id, mediaType } = useParams();
     const [movie, setMovie] = useState(null);
     const [trailer, setTrailer] = useState('');
     const [elenco, setElenco] = useState("");
 
-
     useEffect(() => {
         const buscarDetalhesDoFilme = async () => {
-            const tipoMedia = mediaType || 'movie';
           const movieURL = fetch(`${urlBase}/${mediaType}/${id}?language=pt-BR&${ApiKey}`).then((result) => result.json());
           const trailerURL = fetch(`${urlBase}/${mediaType}/${id}/videos?language=pt-BR&${ApiKey}`).then((result) => result.json());
           const ElencoURL = fetch(`${urlBase}/${mediaType}/${id}/credits?language=pt-BR&${ApiKey}`).then((result) => result.json());
@@ -31,8 +28,6 @@ const InfoMovieAndTV = () => {
 
         buscarDetalhesDoFilme(); 
     }, [id, mediaType]);
-    
-   console.log(trailer, movie);
 
     return (
         <div>
@@ -44,8 +39,7 @@ const InfoMovieAndTV = () => {
                     <div className='infoMovie'>
                         <img src={urlImage.replace('w500', 'original') + movie.poster_path} alt={movie.title} />
                     </div>
-                </div>
-                
+                </div> 
             )
              : (
                 <p>Carregando informações do filme...</p>
@@ -86,27 +80,27 @@ const InfoMovieAndTV = () => {
                     {trailer && trailer.results&& (
                         <YouTube 
                         videoId={
-                            trailer?.results.find(
-                              (video) => video.name === 'Trailer Oficial Dublado' || video.name === 'Trailer Dublado'
-                            )?.key ||
-                            trailer?.results.find(
-                              (video) => video.name === 'Trailer Oficial Legendado' || video.name === 'Trailer Legendado'
-                            )?.key ||
-                            trailer?.results.find(
-                                (video) => video.name === 'Trailer oficial (Dublado)' || video.name === 'Trailer final Oficial (Dublado)'
-                            )
-                          }
+                          // Procura pelo trailer dublado
+                          trailer?.results.find(
+                            (video) => video.name === 'Trailer Oficial Dublado' || video.name === 'Trailer Dublado'
+                          )?.key ||
+                    
+                          // Se não encontrar, procura pelo trailer legendado
+                          trailer?.results.find(
+                            (video) => video.name === 'Trailer Oficial Legendado' || video.name === 'Trailer Legendado'
+                          )?.key ||
+                    
+                          // Se ainda não encontrar, use a chave do primeiro vídeo encontrado
+                          (trailer.results[0]?.key)
+                        }
                         opts={{ width: '90%', height: '600px', playerVars: { autoplay: 2 } }} 
-                    />
+                      />
                     )}
                 </div>
                     
             </div>
         </div>
-        
     );
 };
-
-
 
 export default InfoMovieAndTV

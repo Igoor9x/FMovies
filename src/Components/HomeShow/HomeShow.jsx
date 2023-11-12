@@ -15,16 +15,11 @@ function HomeShow() {
         const res = await req.json();
         const index = Math.floor(Math.random() * res.results.length);
         const movieSelected = res.results[index];
-        console.log(res);
         setRandomMovie(movieSelected);
     }
     useEffect(() => {
         getRandomMovie();
     }, []);
-
-    useEffect(() => {
-        console.log(randomMovie);;
-    }, [randomMovie]);
 
 
     

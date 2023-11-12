@@ -1,10 +1,11 @@
 import React from 'react'
+import SearchMovies from '../Components/Searchs/SearchMovies'
 
 function SearchMovie() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <SearchMovies />
+    </>
   )
 }
 

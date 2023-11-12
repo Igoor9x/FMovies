@@ -22,8 +22,8 @@ function Header() {
             <Link to='/'><h1>FMovies</h1></Link>
             <nav className='navgation'>
             <Link to='/'><li>Início</li></Link>
-            <Link to='searchTV'><li>Filmes</li></Link>
-            <Link to='searchMovie'><li>Tv</li></Link>
+            <Link to='searchMovie'><li>Filmes</li></Link>
+            <Link to='searchTV'><li>Tv</li></Link>
             </nav>
         </div>
       

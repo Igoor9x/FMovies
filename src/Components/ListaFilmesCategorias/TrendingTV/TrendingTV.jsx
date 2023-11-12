@@ -45,7 +45,6 @@ function TrendingTV() {
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Programas de TV</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams}>

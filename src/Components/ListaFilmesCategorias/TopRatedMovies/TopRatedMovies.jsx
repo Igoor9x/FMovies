@@ -44,7 +44,6 @@ function TopRatedMovies() {
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Melhores de todos os tempos</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams}>

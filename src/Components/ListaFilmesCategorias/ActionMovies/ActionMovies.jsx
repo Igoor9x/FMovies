@@ -44,7 +44,6 @@ function ActionMovies() {
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Ação</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams}>

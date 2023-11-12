@@ -44,7 +44,6 @@ function Documentaires() {
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Documentarios</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams}>

@@ -45,7 +45,6 @@ function TrendingMovies() {
     <div className='containerMovies'>
         <div className='categoryName'>
             <span>Populares</span>
-            <button>Ver mais</button>
         </div>
         <div className='widthSwiper'>
             <Swiper {...swiperParams}>
