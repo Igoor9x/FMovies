@@ -25,8 +25,8 @@ function HomeShow() {
     
   return (
       <div className='containerHomeShow'>
-        <div className='imageBackground' style={{ backgroundImage: `url(${urlImage.replace('w500', 'original') + randomMovie?.backdrop_path})` }}></div>
-        <div className='imageBackgroundBlack'></div>
+        <div className='imageBackground' style={{ height:'100%', backgroundImage: `url(${urlImage.replace('w500', 'original') + randomMovie?.backdrop_path})` }}></div>
+        <div className='imageBackgroundBlack' style={{height:'100%'}}></div>
         <div className='centerInfo'>
             <div className='textInfo'>
                 <h2>{randomMovie?.title ? randomMovie.title : randomMovie?.name}</h2>
